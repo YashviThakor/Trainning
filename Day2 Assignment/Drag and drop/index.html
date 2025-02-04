@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop (Move & Reorder)</title>
+    <style>
+        #container {
+            width: 300px;
+            height: 200px;
+            border: 2px solid #000;
+            padding: 10px;
+            margin: 20px;
+            overflow-y: auto;
+            background-color: #f7f7f7;
+        }
+
+        #draggable-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .draggable {
+            background: #f0f0f0;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            cursor: grab;
+            width: 280px;
+        }
+
+        .dragging {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Drag items into the box </h3>
+
+    <ul id="draggable-list">
+        <li class="draggable" draggable="true">Eat</li>
+        <li class="draggable" draggable="true">Sleep</li>
+        <li class="draggable" draggable="true">Learn</li>
+        <li class="draggable" draggable="true">Code</li>
+    </ul>
+
+    <h3>Drop Here: </h3>
+    <ul id="container"></ul>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
