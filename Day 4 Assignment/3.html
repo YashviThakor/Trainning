@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Leak</title>
+</head>
+<body>
+    <h1>Assignment Question 3</h1>
+    <script>
+        let memoryArray = [];
+        function startMemory() {
+            setInterval(() => {
+                const obj = { data: new Array(1000).fill('leak') };
+                memoryArray.push(obj);
+                console.log(`Array length: ${memoryArray.length}`);
+            }, 100);
+        }
+        const MAX_LENGTH = 10000;
+        setInterval(() => {
+            if (memoryArray.length > MAX_LENGTH) {
+                console.log(`Cleaning up ${memoryArray.length}`);
+                memoryArray = [];
+            }
+        }, 5000); 
+        setInterval(() => {
+            const memoryUsage = performance.memory;
+            console.log(`Used JavaScript Heap Size: ${memoryUsage.usedJSHeapSize}`);
+        }, 1000);
+        startMemory();
+    </script>
+</body>
+</html>
