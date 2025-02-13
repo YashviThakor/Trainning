@@ -1,7 +1,8 @@
+/* General body styling */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #1e1e2f;
-    color: #f5f5f5; 
+    color: #f4f4f9;
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,97 +11,93 @@ body {
     height: 100vh;
 }
 
+/* Main container styling */
 .container {
-    background: #2a2a40;
+    background: #28293e;
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     width: 100%;
     max-width: 600px;
     text-align: center;
 }
 
+/* Header styling */
 h1 {
-    color: #ff6f61; 
+    color: #ff6b6b;
     font-size: 2.5em;
     margin-bottom: 20px;
     font-weight: bold;
 }
 
+/* Question styling */
 .question {
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin-bottom: 25px;
-    color: #e8e8e8;
+    color: #d1d1e0;
 }
 
+/* Choices buttons styling */
 .choices {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
 }
 
 .choice-button {
-    background-color: #39395f;
-    color: #f5f5f5;
+    background-color: #4c4f6d;
+    color: #f4f4f9;
     border: none;
     border-radius: 8px;
-    padding: 15px;
-    font-size: 1.2em;
+    padding: 12px;
+    font-size: 1em;
     cursor: pointer;
-    transition: transform 0.2s, background-color 0.3s ease;
+    transition: transform 0.2s, background-color 0.3s;
 }
 
 .choice-button:hover {
-    background-color: #ff6f61;
-    color: #1e1e2f; 
-    transform: scale(1.05);
+    background-color: #626681;
+    transform: translateY(-2px);
 }
 
+.choice-button:active {
+    background-color: #3e4058;
+    transform: translateY(1px);
+}
+
+/* Next button styling */
 .button {
-    margin-top: 20px;
-    background-color: #4caf50;
-    color: white;
+    margin-top: 25px;
+    background-color: #50c878;
+    color: #1e1e2f;
     border: none;
     border-radius: 8px;
-    padding: 12px 20px;
-    font-size: 1.2em;
-    font-weight: bold;
+    padding: 12px 24px;
+    font-size: 1.1em;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.3s;
 }
 
 .button:hover {
-    background-color: #43a047;
-    transform: scale(1.05); 
+    background-color: #44b36a;
+    transform: translateY(-2px);
 }
 
+.button:active {
+    background-color: #379956;
+    transform: translateY(1px);
+}
+
+.button:disabled {
+    background-color: #666872;
+    cursor: not-allowed;
+}
+
+/* Score styling */
 .score {
-    font-size: 1.8em;
+    font-size: 1.6em;
+    margin-top: 30px;
+    color: #ffd700;
     font-weight: bold;
-    margin-top: 25px;
-    color: #f5f5f5;
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    .question {
-        font-size: 1.2em;
-    }
-
-    .choice-button {
-        padding: 12px;
-        font-size: 1em;
-    }
-
-    .button {
-        font-size: 1em;
-        padding: 10px 16px;
-    }
 }
