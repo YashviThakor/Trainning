@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2016",                               /* Ensures ES6+ features are supported. */
+    "lib": ["es2016", "dom"],                         /* Enables ES6 features like Map, findIndex, and Array.from. */
+    "module": "commonjs",                             /* For compatibility with Node.js. */
+    "strict": true,                                   /* Enables all strict type-checking options. */
+    "esModuleInterop": true,                          /* Provides better compatibility for CommonJS modules. */
+    "forceConsistentCasingInFileNames": true,         /* Ensures consistent import casing. */
+    "skipLibCheck": true,                             /* Skips type checking of declaration files. */
+    "outDir": "./dist"                                /* Specifies output folder for compiled JS. */
+  },
+  "include": ["*.ts"],                                /* Compiles all TypeScript files in the root folder. */
+  "exclude": ["node_modules"]                         /* Excludes node_modules folder. */
+}
